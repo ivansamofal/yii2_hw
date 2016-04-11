@@ -34,7 +34,7 @@ class Calendar extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['creator'], 'integer'],
             [['date_event'], 'safe'],
-            [['creator'], 'exist', 'skipOnError' => true, 'targetClass' => ClndrUser::className(), 'targetAttribute' => ['creator' => 'id']],
+            [['creator'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['creator' => 'id']],
         ];
     }
 
